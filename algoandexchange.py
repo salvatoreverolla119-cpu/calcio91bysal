@@ -1,5 +1,12 @@
 import math
 
+import streamlit as st
+
+# Questo è il trucco magico che trasforma tutti i print in scritte sul web!
+print = st.write 
+
+st.title("Il mio Software Calcistico ⚽")
+
 def calcola_poisson(media_gol, gol):
     """Calcola la probabilità base di Poisson."""
     return (math.pow(media_gol, gol) * math.exp(-media_gol)) / math.factorial(gol)
